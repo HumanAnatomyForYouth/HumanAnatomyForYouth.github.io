@@ -12,6 +12,27 @@
         <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/hero.css">
         <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+        <style>
+            .answer {
+              padding: 15px;
+              background-color: #fff;
+              display: none;
+            }
+            .answer.is-visible {
+              display: block;
+              animation: slide-down 0.3s ease-out;
+            }
+            @keyframes slide-down {
+              0% {
+                opacity: 0;
+                transform: translateY(-10px);
+              }
+              100% {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          </style>
     </head>
     <body>
         <section class="hero is-success is-medium is-bold">
@@ -71,43 +92,117 @@
                         <p class="subtitle has-text-centered">The human body is a miraculous thing. It is like a well-oiled machine that responds to the stimuli around it. Therefore, it is only natural that kids learn about the body. In a way, they are learning about themselves to the deepest extent possible.</p>
                     </div>
                 </div>
-                <div class="columns is-centered">
-                    <div class="column is-8">
-                        <h1 class="title is-size-3 has-text-centered mt-3">HAY Fundraisers</h1>
-                    </div>
-                </div>
-                <div class="columns features is-multiline mt-2">
-                    <div class="column is-6">
-                        <div class="card">
-                            <div class="card-image">
-                                <figure class="image is-4by3">
-                                    <a href="2018-concert.html"><img src="images/home/hay-2018.png" alt="HAY Benefit Concert 2018"></a>
-                                </figure>
-                            </div>
-                            <div class="card-content has-text-centered">
-                                <div class="content">
-                                    <h4>2018</h4>
-                                    <a href="2018-concert.html">About</a>
-                                </div>
-                            </div>
+
+                <section class="section">
+                    <div class="container">
+                      <h1 class="title"></h1>
+                      <div class="columns is-centered">
+                        <div class="column is-8">
+                            <h1 class="title is-size-3 has-text-centered mt-3">Frequently Asked Questions</h1>
                         </div>
                     </div>
-                    <div class="column is-6">
+                      <div class="faq">
                         <div class="card">
-                            <div class="card-image">
-                                <figure class="image is-4by3">
-                                    <a href="2019-fundraiser.html"><img src="images/home/dsc-0627.jpg" alt="Cesar Chavez Academy Chapter 2019"></a>
-                                </figure>
+                          <header class="card-header question" onclick="toggleAnswer(this)">
+                            <p class="card-header-title">
+                                Q: What is Human Anatomy for Youth?
+                            </p>
+                          </header>
+                          <div class="card-content answer">
+                            <div class="content">
+                                A: We are an initiative which aims to teach elementary school students about the basics of
+                                human anatomy! Anatomy is an important science, yet it is one that is sparsely taught. We aim
+                                to use interactive methods of teaching, such as models and puzzles, as well as fun videos to
+                                foster curiosity of the anatomical sciences in students.
                             </div>
-                            <div class="card-content has-text-centered">
-                                <div class="content">
-                                    <h4>2019</h4>
-                                    <p><a href="2019-fundraiser.html">About</a></p>
-                                </div>
-                            </div>
+                          </div>
                         </div>
+                  
+                        <div class="card">
+                          <header class="card-header question" onclick="toggleAnswer(this)">
+                            <p class="card-header-title">
+                                Q: What grade levels do you cater to? How many students are in a class?
+                            </p>
+                          </header>
+                          <div class="card-content answer">
+                            <div class="content">
+                                A: HAY caters to students from grades 3-5. In the past, we have also taught 6th graders. Class
+                                sizes can range. We have taught in small settings with 3-4 students. Conversely, we have
+                                taught up to 23 students in a class.
+                            </div>
+                          </div>
+                        </div>
+                  
+                        <div class="card">
+                          <header class="card-header question" onclick="toggleAnswer(this)">
+                            <p class="card-header-title">
+                                Q: What makes your teaching interesting?
+                            </p>
+                          </header>
+                          <div class="card-content answer">
+                            <div class="content">
+                                A: We have all been through lectures which we feel never end. HAY does not seek to emulate
+                                that experience. Instead, we engage students by having them be more involved in their own
+                                learning process, whether that be through a hands-on model building activity, artistic
+                                endeavours, or having class discussions. We find that this helps students remember more, and
+                                makes the learning process much more fun!
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                            <header class="card-header question" onclick="toggleAnswer(this)">
+                              <p class="card-header-title">
+                                Q: What is covered in the HAY curriculum?
+                              </p>
+                            </header>
+                            <div class="card-content answer">
+                              <div class="content">
+                                A: We cover the skeletal, muscular, cardiovascular, respiratory, and digestive systems. We also
+                                have units on pathogens and vaccines, and a basic introduction to what cells are.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <header class="card-header question" onclick="toggleAnswer(this)">
+                              <p class="card-header-title">
+                                Q: Where does HAY teach?
+                              </p>
+                            </header>
+                            <div class="card-content answer">
+                              <div class="content">
+                                A: We have 1 branch in Baltimore, MD, another branch in San Jose, CA, and are in the process
+                                of developing a branch in St. Louis, MO! We are always looking for more schools to help out in,
+                                so please reach out if you are interested in the program!
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <header class="card-header question" onclick="toggleAnswer(this)">
+                              <p class="card-header-title">
+                                Q: How do I help out?
+                              </p>
+                            </header>
+                            <div class="card-content answer">
+                              <div class="content">
+                                A: Fill out the interest form on the <a href="contact.html">contact page</a>! We’ll get back to you as soon as we can on what
+                                opportunities are available for you!
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                  
                     </div>
-                </div>
+                  </section>
+                  
+                  <script>
+                    function toggleAnswer(header) {
+                      const answer = header.nextElementSibling;
+                      answer.classList.toggle('is-visible');
+                    }
+                  </script>
                 <div class="columns is-centered">
                     <div class="column is-8">
                         <div class="tile is-ancestor">
